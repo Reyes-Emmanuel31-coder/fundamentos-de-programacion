@@ -1,0 +1,325 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPumOXxViPrCHJ0jZpT+LLL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Reyes-Emmanuel31-coder/fundamentos-de-programacion/blob/main/unidad2/Introduccion%20a%20funciones\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "![image](https://github.com/JoseGabriel-ITD/Probabilidad-y-Estadistica/blob/main/Cintilla2004.png?raw=true)\n",
+        "# **Ingeniería en Sistemas Computacionales**\n",
+        "\n",
+        "## **Fundamentos de Programación**\n",
+        "\n",
+        "## **Unidad 2**\n",
+        "\n",
+        "### introduccion a funciones\n",
+        "\n",
+        "Docente: **José Gabriel Rodriguez Rivas**\n",
+        "\n",
+        "Alumno: _Jesus Emmanuel Reyes Dominguez_"
+      ],
+      "metadata": {
+        "id": "hJmBNqEKa6gA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "7-YNt-TfWoxx"
+      },
+      "outputs": [],
+      "source": [
+        "#Declaramos una funcion llamada funcion que no hace nada,hasta que la mandemos llamar\n",
+        "def saludar():\n",
+        "  print(\"Hola \")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Mandamos llamar la funcion saludar\n",
+        "saludar()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "00XuODlYZ4r5",
+        "outputId": "cb54486a-7b50-4284-9447-d28ccc089e17"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hola \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#definir un parametro llamado nombre y puede recibr un valor\n",
+        "#valor que usaremos dentro de la funcion\n",
+        "def saludar2(nombre):\n",
+        "  print(\"Hola\",nombre,\"Como estas\")"
+      ],
+      "metadata": {
+        "id": "yLgEqmlLaJJY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saludar2(\"Ana\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PkxNaZrLaudQ",
+        "outputId": "62db584d-f417-490f-fc0f-811b679660fa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hola Ana Como estas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def tablas_de_multiplicar(x):\n",
+        "  for i in range(10):\n",
+        "    print(x,\"por\",i,\"=\",x*1)"
+      ],
+      "metadata": {
+        "id": "Qq2tzeRzb1Q4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tablas_de_multiplicar(3)\n",
+        "tablas_de_multiplicar(5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yumbkUD-cZqw",
+        "outputId": "8b3e1d69-520a-47ed-c658-44caf9dc4fb5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3 por 0 = 3\n",
+            "3 por 1 = 3\n",
+            "3 por 2 = 3\n",
+            "3 por 3 = 3\n",
+            "3 por 4 = 3\n",
+            "3 por 5 = 3\n",
+            "3 por 6 = 3\n",
+            "3 por 7 = 3\n",
+            "3 por 8 = 3\n",
+            "3 por 9 = 3\n",
+            "5 por 0 = 5\n",
+            "5 por 1 = 5\n",
+            "5 por 2 = 5\n",
+            "5 por 3 = 5\n",
+            "5 por 4 = 5\n",
+            "5 por 5 = 5\n",
+            "5 por 6 = 5\n",
+            "5 por 7 = 5\n",
+            "5 por 8 = 5\n",
+            "5 por 9 = 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"Ingresa la tabla que quieres: \"))\n",
+        "y = int(input(\"Hasta que numero debe llegar (no superior a 100): \"))\n",
+        "\n",
+        "def tablas_de_multiplicar(x, y):\n",
+        "  if y <= 100:\n",
+        "    for i in range(1, y + 1):\n",
+        "      print(x, \"x\", i , \"=\",x * i)\n",
+        "  else:\n",
+        "    print(\"La tabla supera el numero 100\")\n",
+        "\n",
+        "tablas_de_multiplicar(x,y)"
+      ],
+      "metadata": {
+        "id": "1weTxhICYv6l"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Regresar un resultado - La instruccion return**"
+      ],
+      "metadata": {
+        "id": "pW85f1_VY79-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "base = int(input(\"Ingresa la base: \"))\n",
+        "altura = int(input(\"Ingresa la altura: \"))\n",
+        "\n",
+        "\n",
+        "def calcular_area(base, altura):\n",
+        "  area = base * altura\n",
+        "  return area\n",
+        "\n",
+        "calcular_area(base, altura)\n",
+        "resultado = calcular_area( base,altura)\n",
+        "print(resultado)"
+      ],
+      "metadata": {
+        "id": "fkQjueuoY-fj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "def calcular_area(base, altura):\n",
+        "  area = base * altura\n",
+        "  return area\n",
+        "\n",
+        "calcular_area(25, 13)\n",
+        "resultado = calcular_area( 26, 14)\n",
+        "print(\"Area del triangulo\", resultado)\n",
+        "print(\"Area del triangulo\", calcular_area(10, 5))"
+      ],
+      "metadata": {
+        "id": "CxjV3pXIZD3m"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Alcance de las variables**\n",
+        "\n",
+        "- El alcance de una variable se refiere a la parte del codigo donde se conoce la variable.\n",
+        "\n",
+        "- Una variable que se define dentro de una función NO existe en otras funciones o fuera de la función.\n",
+        "\n",
+        "- Para extender el alcance de una variable y que pueda existir fuera de una funcion se debe definir con la palabra reservada **global**."
+      ],
+      "metadata": {
+        "id": "ClC6p9lcZMZj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def miFuncion():\n",
+        "  # La variablex de miFuncion existe unicamente dentro del\n",
+        "  # codigo de la funcion\n",
+        "  global variablex\n",
+        "  variablex = 123\n",
+        "  print(variablex)\n",
+        "\n",
+        "miFuncion()\n",
+        "# La siguiente variable NO es la misma que esta definida en MiFuncion,\n",
+        "# por lo tanto, no existe la variable y por eso marca error\n",
+        "print(variablex)"
+      ],
+      "metadata": {
+        "id": "7X5Iqo7vZU0M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def funcion2():\n",
+        "  variable1 = 5\n",
+        "  print(\"El valor de variable1 es: \", variable1)\n",
+        "\n",
+        "variable1 = 10\n",
+        "print(\"Valor de la variable1 es: \", variable1)\n",
+        "funcion2()\n",
+        "print(\"Valor de la variable1 es: \", variable1)"
+      ],
+      "metadata": {
+        "id": "ZoCR5rq3ZV_Z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def funcion2():\n",
+        "  global variable1\n",
+        "  variable1 = 5\n",
+        "  print(\"El valor de variable1 es: \", variable1)\n",
+        "\n",
+        "variable1 = 10\n",
+        "print(\"Valor de la variable1 es: \", variable1)\n",
+        "funcion2()\n",
+        "print(\"Valor de la variable1 es: \", variable1)"
+      ],
+      "metadata": {
+        "id": "LQyOHB2cZbOf"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
